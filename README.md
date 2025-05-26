@@ -1,7 +1,7 @@
 ****************  INSTRUCCIONES PARA LA INSTALACIÓN Y EJECUCIÓN  ****************
 
 1. Clonar el repositorio con el siguiente comando:
-   git clone https://github.com/tu-usuario/tu-repo.git
+   git clone https://github.com/Ivan197/todo_list.git
 
 2. Acceder al directorio del backend:
    cd todo_list/api
@@ -45,6 +45,7 @@
 
 
 ****************  INSTRUCCIONES PARA CREAR BD  ****************
+
 CREATE DATABASE IF NOT EXISTS todolist;
 USE todolist;
 
