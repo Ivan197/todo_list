@@ -14,15 +14,24 @@ exports.getAllUsers = (req, res) => {
 exports.register = async (req, res) => {
   const { username, password, firstname, lastname, active } = req.body;
   const hashedPassword = await bcrypt.hash(password, 10);
+   // Verificar si el usuario ya existe
+  db.query("SELECT * FROM users WHERE username = ?", [username], async (err, results) => {
+    if (err) return res.status(500).json({ error: err.message });
 
-  db.query(
-    "INSERT INTO users (username, password, firstname, lastname, active) VALUES (?, ?, ?, ?, ?)",
-    [username, hashedPassword, firstname, lastname, active],
-    (err, results) => {
-      if (err) return res.status(500).json({ error: err.message });
-      res.status(200).json({ message: "Usuario registrado con éxito", statusCode: 202 });
+    if (results.length > 0) {
+      return res.status(200).json({ message: "El nombre de usuario ya está en uso" });
     }
-  );
+
+    // Si no existe, continuar con el registro
+    db.query(
+      "INSERT INTO users (username, password, firstname, lastname, active) VALUES (?, ?, ?, ?, ?)",
+      [username, hashedPassword, firstname, lastname, active],
+      (err, results) => {
+        if (err) return res.status(200).json({ error: err.message });
+        res.status(200).json({ message: "Usuario registrado con éxito", statusCode: 202 });
+      }
+    );
+  });
 };
 
 // Iniciar sesión
