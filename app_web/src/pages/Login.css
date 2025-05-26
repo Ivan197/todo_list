@@ -1,0 +1,97 @@
+.login-container {
+  display: flex;
+  min-height: 100vh;
+  font-family: 'Arial', sans-serif;
+  background-color: #f0f0f0;
+  padding: 2rem;
+  box-sizing: border-box;
+  gap: 2rem;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+}
+
+.login-form label {
+  align-self: flex-start;
+  margin-top: 0.5rem;
+  margin-bottom: 0.25rem;
+  color: #333;
+  font-weight: bold;
+}
+
+.login-form p {
+  align-self: flex-end;
+  margin-top: 0.5rem;
+  margin-bottom: 0.25rem;
+  color: #333;
+  font-weight: bold;
+}
+
+.login-image {
+  width: 650px;
+  height: 450px;
+  border-radius: 10px;
+  background: url('../assets/images/Illustration.webp') no-repeat center center;
+  background-size: cover;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.login-form {
+  max-width: 400px;
+  width: 100%;
+  padding: 2rem;
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.login-form h2 {
+  margin-bottom: 1.5rem;
+  color: #333;
+}
+
+.login-form input {
+  width: 100%;
+  padding: 0.75rem;
+  margin: 0.5rem 0;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+
+.login-form button {
+  width: 100%;
+  padding: 0.75rem;
+  margin-top: 1rem;
+  background-color: #8c8bf2;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.login-form button:hover {
+  background-color: #8c8bf2;
+}
+
+@media (max-width: 768px) {
+  .login-container {
+    flex-direction: column;
+    padding: 2rem;
+  }
+
+  .login-image {
+    height: 300px;
+    width: 80%;
+    background-size: contain;
+    /* margin-bottom: 1rem; */
+  }
+
+  .login-form {
+    width: 90%;
+    max-width: 90%;
+  }
+}

@@ -1,0 +1,83 @@
+.error {
+  color: red;
+  margin-bottom: 1rem;
+}
+
+.tasks-container {
+  padding: 2rem;
+  font-family: 'Arial', sans-serif;
+}
+
+.tasks-table {
+  width: 100%;
+  border-collapse: collapse;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+  background-color: #ffffff;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.tasks-table th,
+.tasks-table td {
+  padding: 1rem;
+  text-align: left;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.tasks-table thead {
+  background-color: #8c8bf2;
+  color: white;
+}
+
+.tasks-table tbody tr:hover {
+  background-color: #f4f4ff;
+}
+
+.tasks-table td {
+  color: #333;
+}
+
+/* Botón para abrir el modal */
+.add-task-button {
+  margin-bottom: 1rem;
+  padding: 0.75rem 1.5rem;
+  background-color: #8c8bf2;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.add-task-button:hover {
+  background-color: #6d6cf0;
+}
+
+.action-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 1rem;
+  margin-right: 0.5rem;
+  padding: 0.5rem;
+  border-radius: 6px;
+  transition: background-color 0.2s;
+}
+
+/* Botón Editar - Violeta */
+.action-btn.edit {
+  color: #ffc003;
+}
+
+.action-btn.edit:hover {
+  background-color: rgba(246, 249, 85, 0.1);
+}
+
+/* Botón Eliminar - Rojo */
+.action-btn.delete {
+  color: #e74c3c;
+}
+
+.action-btn.delete:hover {
+  background-color: rgba(231, 76, 60, 0.1);
+}

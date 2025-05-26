@@ -1,0 +1,27 @@
+.dashboard-layout {
+  display: flex;
+  height: 100vh;
+}
+
+.dashboard-content {
+  flex: 1;
+  padding: 2rem;
+  background-color: #f0f2f5;
+  overflow-y: auto;
+}
+
+.home-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* height: 100vh;  */
+}
+
+.home-image {
+  width: 650px;
+  height: 450px;
+  border-radius: 10px;
+  background: url("../assets/images/digital.avif") no-repeat center center;
+  background-size: cover;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
